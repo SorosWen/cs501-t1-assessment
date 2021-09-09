@@ -46,6 +46,7 @@ app.register_blueprint(user_index_blueprint)
 @app.cli.command()
 @click.option('--coverage/--no-coverage', default=False,
                 help='Run tests under code coverage.')
+
 def test(coverage):
     """Run the unit tests."""
     if coverage and not os.environ.get('FLASK_COVERAGE'):

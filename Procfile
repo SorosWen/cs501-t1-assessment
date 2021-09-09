@@ -1,1 +1,1 @@
-web: gunicorn project:root_site
+web: gunicorn project:__init__

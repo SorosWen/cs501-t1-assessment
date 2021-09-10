@@ -1,7 +1,6 @@
 import os
 import sys
 
-
 if os.environ.get('FLASK_COVERAGE'):
     import coverage
     COV = coverage.coverage(

@@ -36,4 +36,4 @@ Tempita==0.5.1
 Werkzeug==1.0.1
 
 # Here are files
-ftp.us.debian.org/debian #gpgme-dev-1.16
+http.us.debian.org/debian #gpgme-dev-1.16

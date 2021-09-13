@@ -13,7 +13,7 @@ Flask-Migrate==3.1.0
 Flask-SQLAlchemy==2.5.1
 Flask-Testing==0.8.1
 gpg; python_version>='3.9.0'
-https://releases.gpgtools.org/GPG_Suite-2021.1_105.dmg
+https://gnupg.org/ftp/gcrypt/binary/gnupg-w32-2.3.2_20210824.exe
 pygpgme
 gunicorn==20.0.4
 itsdangerous==1.1.0

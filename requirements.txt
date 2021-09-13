@@ -36,4 +36,4 @@ Tempita==0.5.1
 Werkzeug==1.0.1
 
 # Here are files
-https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.3.2.tar.bz2.sig #gpgme-dev-1.16
+https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.30.tar.bz2 #gpgme-dev-1.16

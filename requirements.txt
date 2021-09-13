@@ -12,7 +12,7 @@ Flask-Bcrypt==0.7.1
 Flask-Migrate==3.1.0
 Flask-SQLAlchemy==2.5.1
 Flask-Testing==0.8.1
-#gpg==1.8.0
+gpg; python_version >= '3.9'
 pygpgme
 gunicorn==20.0.4
 itsdangerous==1.1.0
@@ -37,4 +37,3 @@ Tempita==0.5.1
 Werkzeug==1.0.1
 
 # Here are files
-#https://gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.9.4.tar.bz2.sig #gpgme-dev-1.16

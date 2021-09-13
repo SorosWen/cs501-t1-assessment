@@ -1,1 +1,1 @@
-web: gunicorn --bind 0.0.0.0:$PORT project.server:__init__
+web: gunicorn project.server:__init__

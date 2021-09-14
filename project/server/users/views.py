@@ -8,7 +8,7 @@ user_index_blueprint = Blueprint('users', __name__)
 
 class UserIndexAPI(MethodView):
     """
-    User Registration Resource
+    User View API
     """
     def get(self):
         users_table = User.query.order_by(User.id).all()

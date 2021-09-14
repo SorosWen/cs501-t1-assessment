@@ -34,13 +34,14 @@ class RegisterAPI(MethodView):
                 db.session.commit()
                 # generate the auth token
                 auth_token = user.encode_auth_token(user.id)
-                print("check point1")
+                print("check point 1")
                 responseObject = {
                     'status': 'success',
                     'message': 'Successfully registered.',
                     'auth_token': auth_token
                 }
                 print("check point 2")
+                print(auth_token)
                 return make_response(jsonify(responseObject)), 201
             except Exception as e:
                 responseObject = {

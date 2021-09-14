@@ -4,7 +4,7 @@ from flask.views import MethodView
 from project.server import bcrypt, db
 from project.server.models import User
 
-user_index_blueprint = Blueprint('user', __name__)
+user_index_blueprint = Blueprint('users', __name__)
 
 class UserIndexAPI(MethodView):
     """
@@ -24,11 +24,11 @@ class UserIndexAPI(MethodView):
         return make_response(jsonify(list)), 201
 
 # define the API resources
-user_index_view = UserIndexAPI.as_view('user_index_api')
+user_index_view = UserIndexAPI.as_view('users_index_api')
 
 # add Rules for API Endpoints
 user_index_blueprint.add_url_rule(
-    '/user/index',
+    '/users/index',
     view_func=user_index_view,
     methods=['GET']
 )

@@ -33,6 +33,7 @@ class RegisterAPI(MethodView):
                 db.session.add(user)
                 db.session.commit()
                 # generate the auth token
+                import jwt
                 auth_token = user.encode_auth_token(user.id)
                 print("check point 1")
                 responseObject = {

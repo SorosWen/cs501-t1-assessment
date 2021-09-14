@@ -20,7 +20,8 @@ class RegisterAPI(MethodView):
 
     def post(self):
         # get the post data
-        post_data = request.get_json(); print(request)
+        post_data = request.get_json()
+        print(request)
         # check if user already exists
         user = User.query.filter_by(email=post_data.get('email')).first()
         if not user:
@@ -29,23 +30,18 @@ class RegisterAPI(MethodView):
                     email=post_data.get('email'),
                     password=post_data.get('password')
                 )
+
                 # insert the user
                 db.session.add(user)
                 db.session.commit()
                 # generate the auth token
-                import jwt
                 auth_token = user.encode_auth_token(user.id)
-                print("check point 1")
                 responseObject = {
                     'status': 'success',
                     'message': 'Successfully registered.',
                     'auth_token': auth_token
                 }
-                print("check point 2")
-                try: 
-                    print(auth_token)
-                except Exception as error: 
-                    print(error)
+                print(auth_token)
                 return make_response(jsonify(responseObject)), 201
             except Exception as e:
                 responseObject = {
@@ -59,7 +55,6 @@ class RegisterAPI(MethodView):
                 'message': 'User already exists. Please Log in.',
             }
             return make_response(jsonify(responseObject)), 202
-
 
 # define the API resources
 registration_view = RegisterAPI.as_view('register_api')

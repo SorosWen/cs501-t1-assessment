@@ -2,6 +2,7 @@
 import datetime
 
 from project.server import app, db, bcrypt
+import jwt
 
 class User(db.Model):
     """ User Model for storing user related details """

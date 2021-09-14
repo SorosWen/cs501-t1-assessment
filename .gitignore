@@ -16,3 +16,9 @@ migrations
 diagnostic
 diagnostic_test
 diagnostic_test.db
+
+.vscode
+bin
+new_env
+lib
+pyvenv.cfg

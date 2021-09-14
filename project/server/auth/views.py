@@ -38,7 +38,7 @@ class RegisterAPI(MethodView):
                 responseObject = {
                     'status': 'success',
                     'message': 'Successfully registered.',
-                    'auth_token': auth_token
+                    'auth_token': auth_token.decode()
                 }
                 print("check point 2")
                 print(auth_token)

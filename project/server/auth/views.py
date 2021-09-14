@@ -1,8 +1,10 @@
 from flask import Blueprint, request, make_response, jsonify
 from flask.views import MethodView
 
-from project.server import bcrypt, db
+from project.server import bcrypt, app, db
 from project.server.models import User
+
+import jwt
 
 auth_blueprint = Blueprint('auth', __name__)
 
@@ -39,7 +41,7 @@ class RegisterAPI(MethodView):
                 responseObject = {
                     'status': 'success',
                     'message': 'Successfully registered.',
-                    'auth_token': auth_token
+                    'auth_token': jwt.decode(auth_token, app.config.get('SECRET_KEY'), algorithms=["HS256"])
                 }
                 print(auth_token)
                 return make_response(jsonify(responseObject)), 201

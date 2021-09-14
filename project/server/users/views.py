@@ -12,7 +12,6 @@ class UserIndexAPI(MethodView):
     """
     def get(self):
         users_table = User.query.order_by(User.id).all()
-        print(users_table)
         list = []
         for user in users_table:
             user_info = []
